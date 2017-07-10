@@ -1,4 +1,4 @@
-alert("pollo");
+
 $(document).ready( function(){
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
@@ -6,14 +6,20 @@ $(document).ready( function(){
 
 });
 
-
+//ETAPA UNO
 //jQuery hide() Method , {$(selector).hide()} 
 //El metodo hide() nos permite ocultar algun elemento.
 $("#hide").ready(function(){
         $(".js-back").hide();
     });
 
-
+//ETAPA DOS
+//{$(selector).append(contenido, funcion(index,html))}
+//append(); se encarga de añadir nuevos elementos.
+ function printNews(){
+ 	$('#recetas').append("NUEVAS RECETAS");
+}
+printNews();
 
 
 /*
