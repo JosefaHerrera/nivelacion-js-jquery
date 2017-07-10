@@ -3,6 +3,7 @@ $(document).ready( function(){
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
+	renderActivities(activities);
 
 });
 //ETAPA UNO
@@ -85,15 +86,20 @@ function renderRecipe(recipe) {
 
 
 /*
+
+ //ETAPA CINCO
 * Función que se encarga de pintar todas las actividades
 */
-function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+function renderActivities(activities) {
+	console.log('Activities: ', activities);
+	activities.forEach(function(e){
+		if(d =! 0){
+			$(".wrapper-message").css("display","none")
+		}
+	});
 }
 
 /*
-
-
 * Función que se encarga de pintar una actividad
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
