@@ -5,7 +5,6 @@ $(document).ready( function(){
 	renderHighlightedRecipes(recipesArray);
 
 });
-
 //ETAPA UNO
 //jQuery hide() Method , {$(selector).hide()} 
 //El metodo hide() nos permite ocultar algun elemento.
@@ -20,20 +19,29 @@ $("#hide").ready(function(){
  	$('#recetas').append("NUEVAS RECETAS");
 }
 printNews();
-
-
 /*
-* Función que se encarga de pintar TODAS las recetas que tengan 
+
+//ETAPA TRES
+* Función que se encarga de pintar TODAS las recetas que tengan
 * marcado el atributo "highlighted" como TRUE
+* forEach(); recorre los objetos de un arreglo
+* Si la condición del paso 2 se cumple,
+* manda a llamar la función renderRecipe pasándole como
+* parámetro el objeto que cumplió la condición.
 */
 function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
-}
+    console.log('Recipes: ', recipesArray);
+    recipesArray.forEach(function(e){
+        if (e.highlighted == true){
+            renderRecipe();
+        }
+    })
+};
 
 /*
-* Función que se encarga de pintar UNA recetas que tenga 
+* Función que se encarga de pintar UNA recetas que tenga
 * marcado el atributo "highlighted" como TRUE
-* Aqui se tiene que crear el HTML que esta en el 
+* Aqui se tiene que crear el HTML que esta en el
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
