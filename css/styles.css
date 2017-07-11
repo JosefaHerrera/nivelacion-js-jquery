@@ -2204,3 +2204,11 @@ nav .nav-group.right {
 #admin .btn-primary {
   width: 100%;
 }
+
+
+/*codigo josefa*/
+
+[class^="btn-"][class*="secondary"]:hover, [class*=" btn-"][class*="secondary"]:hover {
+    background-color: #595959;
+    color: white;
+}

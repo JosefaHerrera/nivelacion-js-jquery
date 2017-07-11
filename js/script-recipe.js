@@ -8,3 +8,20 @@ $("#hide").ready(function(){
 $(document).ready(function(){
 	console.log("pagina cargada");
 });
+
+
+ function recipebtn(){
+      	$(".js-show-recipe").click(function(){
+    //remover clase make
+ 		$(".page.recipe").removeClass('make');
+ 		//$(".page.recipe").css('color','white');
+  	});
+    //agregar clase make 
+      	$(".js-show-make").click(function(){
+    		$(".page.recipe").addClass('make');
+    		//$(".page.recipe").css('color','white');
+      });
+  
+  };
+
+  recipebtn();
